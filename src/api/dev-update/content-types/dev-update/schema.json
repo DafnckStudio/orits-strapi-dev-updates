@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dev_updates",
+  "info": {
+    "singularName": "dev-update",
+    "pluralName": "dev-updates",
+    "displayName": "Dev Update",
+    "description": "Updates de développement pour øRits OS"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 500
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "version": {
+      "type": "string",
+      "required": true,
+      "regex": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "releaseDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "feature",
+        "bugfix",
+        "improvement",
+        "security",
+        "breaking-change"
+      ],
+      "default": "feature",
+      "required": true
+    },
+    "priority": {
+      "type": "enumeration",
+      "enum": ["low", "medium", "high", "critical"],
+      "default": "medium",
+      "required": true
+    },
+    "tags": {
+      "type": "json",
+      "default": []
+    },
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "attachments": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["files", "images"]
+    },
+    "author": {
+      "type": "string",
+      "required": true,
+      "default": "øRits Team"
+    },
+    "isBreakingChange": {
+      "type": "boolean",
+      "default": false
+    },
+    "migrationGuide": {
+      "type": "richtext",
+      "required": false
+    }
+  }
+}

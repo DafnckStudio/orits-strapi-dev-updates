@@ -1,0 +1,30 @@
+{
+  "name": "orits-strapi-dev-updates",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Strapi CMS pour les Dev Updates d'øRits OS",
+  "scripts": {
+    "build": "strapi build",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/strapi": "5.23.3",
+    "@strapi/plugin-users-permissions": "5.23.3",
+    "@strapi/plugin-i18n": "5.23.3",
+    "pg": "8.12.0"
+  },
+  "author": {
+    "name": "øRits Team"
+  },
+  "strapi": {
+    "uuid": "orits-dev-updates-cms"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

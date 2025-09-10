@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dev_update_categories",
+  "info": {
+    "singularName": "dev-update-category",
+    "pluralName": "dev-update-categories",
+    "displayName": "Dev Update Category"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "color": {
+      "type": "string",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "default": "#000000"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "dev_updates": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dev-update.dev-update",
+      "mappedBy": "category"
+    }
+  }
+}
